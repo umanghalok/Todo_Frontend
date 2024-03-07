@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+.header{
+    text-align: center;
+    font-size: 6rem;
+    margin:1rem 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+    background-color:#CBF2FF;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container{
+    background-color: rgb(255, 255, 255);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  form{
+    width:100%;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .input {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+
   }
+  
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  .todos-container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .todos-list {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .todo-checkbox {
+    margin-right: 20px;
+    width: 20px; /* Increase checkbox size */
+    height: 20px; /* Increase checkbox size */
+  }
+
+  
+  .todo-text {
+    flex-grow: 1;
+    width: 200px; /* Assign a fixed width */
+    word-wrap: break-word; /* Allow the text to wrap */
+    margin-right: 1rem;
+    font-size: larger;
+    
 }
+  
+.todo-item.done {
+    background-color: rgb(105, 235, 105);
+}
+
+  .todo-actions {
+    display: flex;
+  }
+  
+  .todo-actions button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .todo-actions button.edit-button {
+    background-color: #ffc107;
+    color: #000;
+  }
+  
+  .todo-actions button.delete-button {
+    background-color: #dc3545;
+    color: #fff;
+  }
+  
+  .todo-actions button:hover {
+    filter: brightness(90%); /* Adjust brightness on hover */
+    transform: translateY(2px); /* Move button 2px down on hover */
+  }
+
+  /* Style for input box when in edit mode */
+.edit-input {
+    border: 2px solid #007bff; /* Blue border */
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 5px;
+    width:92%;
+}
+
+/* Style for save button when in edit mode */
+.save-button {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* TodoForm.css */
+.icon {
+    cursor: pointer;
+    vertical-align: middle; /* Align icons vertically */
+}
+
+
+
+.save {
+    color: blue; /* Change save icon color to blue */
+    font-size: 24px; /* Increase save icon size */
+    vertical-align: middle; /* Align save icon vertically */
+}
+
+.edit {
+    color: rgb(0, 0, 0); /* Change edit icon color to yellow */
+    font-size: 18px; /* Increase edit icon size */
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.delete {
+    color: red; /* Change delete icon color to red */
+    font-size: 18px; /* Increase delete icon size */
+    vertical-align: middle;
+}
+
+
+  @media (max-width: 768px) {
+    .todos-container {
+      padding: 0 20px;
+    }
+
+    .edit-input {
+        width:80%;
+    }
+  }
+  
+  
